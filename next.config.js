@@ -32,21 +32,6 @@ async function getWPRedirects() {
 }
 
 module.exports = {
-  // images: {
-  // domains: [process.env.IMAGE_DOMAIN]
-  // minimumCacheTTL: 2592000,
-  // },
-  webpack(config) {
-    const fileLoaderRule = config.module.rules.find(
-      (rule) => rule.test && rule.test.test(".svg")
-    );
-    fileLoaderRule.exclude = /\.svg$/;
-    config.module.rules.push({
-      test: /\.svg$/,
-      loader: require.resolve("@svgr/webpack")
-    });
-    return config;
-  },
   async redirects() {
     const wpRedirects = await getWPRedirects();
     return wpRedirects;
