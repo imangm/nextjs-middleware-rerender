@@ -1,7 +1,10 @@
-export default function WildCardPage() {
+import { MyComp } from "../components/my-comp";
+
+export default function CatchAllPage() {
   return (
-    <div>
-      <h1>This is WILDCARD</h1>
+    <div id="root-catchall">
+      <MyComp />
+      <h1>This is CatchAll Route</h1>
     </div>
   );
 }

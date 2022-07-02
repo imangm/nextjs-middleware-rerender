@@ -32,6 +32,7 @@ async function getWPRedirects() {
 }
 
 module.exports = {
+  // trailingSlash: true,
   async redirects() {
     const wpRedirects = await getWPRedirects();
     return wpRedirects;
