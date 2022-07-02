@@ -1,7 +1,10 @@
+import { Header } from "../components/header";
+
 export default function Home() {
   return (
     <div id="root-index">
-      <h1>This is HOME</h1>
+      <Header />
+      <h3>This is HOME</h3>
     </div>
   );
 }
