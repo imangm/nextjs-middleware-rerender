@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 
 export const Header = () => {
-  const [objState, setObjState] = useState({ name: "World" });
+  const [objState, setObjState] = useState({ name: "Down" });
 
   useEffect(() => {
-    setObjState({ name: "World" });
+    setObjState({ name: "Down" });
   }, []);
 
   return (
-    <header>
-      <h1>Hello {objState.name} !</h1>
+    <header style={{ height: 1000 }}>
+      <h1>Scroll {objState.name} !</h1>
     </header>
   );
 };

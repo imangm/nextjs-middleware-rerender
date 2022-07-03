@@ -1,0 +1,8 @@
+import { NextResponse } from "next/server";
+
+export function middleware(request) {
+  const country = request.geo.country || "US";
+  let res = NextResponse.next();
+  res.cookie("op-country", country);
+  return res;
+}
